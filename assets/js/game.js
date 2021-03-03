@@ -29,7 +29,6 @@ var fight = function(enemyName) {
         // subtract money from playerMoney for skipping
         playerMoney = playerMoney - 10;
         console.log("playerMoney", playerMoney)
-        break;
       }
     } 
 
@@ -46,7 +45,6 @@ var fight = function(enemyName) {
         playerMoney = playerMoney + 20;
 
         // leave while() loop since enemy is dead
-        break;
       } else {
         window.alert(enemyName = " still has " + enemyHealth + " health left.")
       }
@@ -61,7 +59,6 @@ var fight = function(enemyName) {
       if (playerHealth <= 0) {
         window.alert(playerName + " has died!");
         // leave while() loop if player is dead
-        break;
       } else {
         window.alert(playerName + " still has " + playerHealth + " health left.");
       }
@@ -73,13 +70,12 @@ var fight = function(enemyName) {
  // check enemy's health
   if (enemyHealth <= 0) {
     window.alert(enemyName + " has died!");
-    break;
   } else {
     window.alert(enemyName + " still has " + enemyHealth + " health left.");
   }
 
   // if player did not chose 1 or 2 in prompt
-} else {
+  else {
     window.alert("You need to pick a valid option. Try again!");
   }
 
@@ -91,4 +87,4 @@ for(var i = 0; i < enemyNames.length; i++) {
   }  
 
 // run fight function to start game
-//fight();
+//fight()
