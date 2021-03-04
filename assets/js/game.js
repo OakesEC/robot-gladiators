@@ -102,7 +102,7 @@ function startGame() {
 
 // start the game when the page loads
 startGame();
-debugger;
+
 // function to end entire game
 function endGame() {
   // if play is still alive, player wins
