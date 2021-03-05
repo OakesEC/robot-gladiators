@@ -20,29 +20,19 @@ var fight = function(enemyName) {
     var promptFight = window.prompt('Would you like to FIGHT or SKIP this battle? Enter "FIGHT" or "SKIP" to choose.');
 
     // if player picks "skip" confirm and then stop the loop
-    switch(promptFight) {
-      case "SKIP": // new case
-      case "skip":
+    if (promptFight === "skip" || promptFight === "SKIP") {
       // confirm player wants to skip
-        var confirmSkip = window.confirm("Are you sure you'd like to quit?");
-        // if yes (true), leave fight
-        if (confirmSkip) {
+      var confirmSkip = window.confirm("Are you sure you'd like to quit?");
+
+      // if yes (true), leave fight
+      if (confirmSkip) {
         window.alert(playerName + ' has decided to skip this fight. Goodbye!');
         // subtract money from playerMoney for skipping
         playerMoney = playerMoney - 10;
+
         break;
       }
-      case "FIGHT": // new case
-      case "fight": 
-        //start game
-        startGame();
-        console.log("Let's fight!");
-        break;
-      default:
-        window.alert("You did not pick a valid option.  Please try again.")
-
     }
-    
     // what happened to the in not SKIP or FIGHT then request valid input??
 
     // remove enemy's health by subtracting the amount set in the playerAttack variable
