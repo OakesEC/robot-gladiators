@@ -10,8 +10,8 @@ var enemyAttack = 12;
 //function to generate a random numeric value
 var randomNumnber = function(min, max) {
   var value = Math.floor(Math.random() * (max - min + 1) + min);
-
   return value;
+  
 };
 
 
@@ -23,7 +23,7 @@ var startGame = function() {
   playerAttack = 10;
   playerMoney = 10;
 
-  // fight each enemy robot by looping over them and fighting them one at a time
+  // function to fight each enemy robot by looping over them and fighting them one at a time
   for (var i = 0; i < enemyNames.length; i++) {
     // if player is still alive, keep fighting
     if (playerHealth > 0) {
